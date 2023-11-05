@@ -4,7 +4,11 @@ on:
   schedule:
     # Run “at minute 0 past every 2nd hour.” (see https://crontab.guru)
     - cron: '0 */2 * * *'
+  workflow_dispatch:
 
+env:
+  TZ: Asia/Shanghai
+  
 jobs:
   build:
     runs-on: ubuntu-latest
